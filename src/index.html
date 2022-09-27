@@ -1,62 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paginated Data</title>
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Document</title>
 </head>
-
 <body>
+    <h1>Paginated Random Data for app users</h1>
+    <div class="loader" id="loader"></div>
 
     <table>
-        <caption>paginated random data of app users</caption>
-        <thead>
-            <tr>
-                <td># No.</td>
-                <td>Gender</td>
-                <td>Age</td>
-            </tr>
-        </thead>
-        <tbody data-sink>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
+      <thead>
+
+        <tr>
+          <th>No.</th>
+          <th>GENDER</th>
+          <th>AGE</th>
+        </tr>
+      </thead>
+      <tbody  id="table-body">
+
+      </tbody>
+
     </table>
 
-    <div class="btn-group">
-        <button data-prevbtn>Previous</button>
-        <button data-nextbtn>Next</button>
-        <label data-pageview></label>
+    <div class="pagination-container">
+      <div class="pagination-button-container">
+        <button class="button"  id="previous-page">Previous</button>
+        <button class="button" id="next-page">Next</button>
+
+      </div>
+      <h3>Showing page <span id="page-number">1</span></h3>
     </div>
-
-    <script type="module" src="app.ts"></script>
+    
 </body>
-
 </html>
